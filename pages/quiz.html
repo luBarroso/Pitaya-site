@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Pitaya - A Fruta do Dragão</title>
+</head>
+
+<body class="quiz">
+    <nav>
+        <img src="../images/logozinha.png" alt="Pitaya_logo">
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="historia.html">Histórico</a></li>
+            <li ><a id="pagina-atual" href="quiz.html">Quiz</a></li>
+            <li><a href="curiosidades.html">Curiosidades</a></li>
+        </ul>
+    </nav>
+    <div class="main-e-fundo">
+        <main>
+            <h2 class="quiz">Quiz</h2>
+
+            <form class="quiz">
+                <h3>Em que país a Pitaya é uma fruta nativa?</h3>
+                <div class="perguntas">
+                    <button class="errado" type="button">Alemanha</button>
+                    <button class="errado" type="button">Autrália</button>
+                    <button class="certo" type="button">México</button>
+                    <button class="errado" type="button">Índia</button>
+                </div>
+    
+                <h3>Verdadeiro ou Falso?</h3>
+                <p class="afirmacao">"As flores de Pitaya florescem durante a noite."</p>
+                <div class="perguntas">
+                    <button class="certo" type="button">Verdadeiro</button>
+                    <button class="errado" type="button">Falso</button>
+                </div>
+
+                <h3>Qual a espécie da pitaya da imagem abaixo?</h3>
+                <img class="afirmacao" src="../images/Pergunta_pitaya_1.png" alt="Pitaya Pergunta 2">
+                <div class="perguntas">
+                    <button class="errado" type="button">Selenicereus Megalanthus</button>
+                    <button class="errado" type="button">Hylocereus Undatus</button>
+                    <button class="certo" type="button">Hylocereus Polyrhizus</button>
+                    <button class="errado" type="button">Selenicereus chrysocardium</button>
+                </div>
+                
+                <h3>Qual a espécie da pitaya da imagem abaixo?</h3>
+                <img class="afirmacao" src="../images/Pergunta_pitaya_2.png" alt="Pitaya Pergunta 2">
+                <div class="perguntas">
+                    <button class="errado" type="button">Selenicereus Megalanthus</button>
+                    <button class="certo" type="button">Hylocereus Undatus</button>
+                    <button class="errado" type="button">Hylocereus Polyrhizus</button>
+                    <button class="errado" type="button">Selenicereus chrysocardium</button>
+                </div>
+
+                <h3>Qual a espécie da pitaya da imagem abaixo?</h3>
+                <img class="afirmacao" src="../images/Pergunta_pitaya_3.png" alt="Pitaya Pergunta 2">
+                <div class="perguntas">
+                    <button class="certo" type="button">Selenicereus Megalanthus</button>
+                    <button class="errado" type="button">Hylocereus Undatus</button>
+                    <button class="errado" type="button">Hylocereus Polyrhizus</button>
+                    <button class="errado" type="button">Selenicereus chrysocardium</button>
+                </div>
+
+                <h3>Verdadeiro ou Falso?</h3>
+                <p class="afirmacao">"A pitaya é pertencente à família de cactáceas."</p>
+                <div class="perguntas">
+                    <button class="certo" type="button">Verdadeiro</button>
+                    <button class="errado" type="button">Falso</button>
+                </div>
+
+                <h3>Verdadeiro ou Falso?</h3>
+                <p class="afirmacao">"A pitaya Selenicereus Megalanthus, também conhecida como pitaya amarela, não possui espinhos."</p>
+                <div class="perguntas">
+                    <button class="errado" type="button">Verdadeiro</button>
+                    <button class="certo" type="button">Falso</button>
+                </div>
+
+                <div class="questionario">
+                    <p>Questionário</p>
+                    <h3>Você já experimentou uma pitaya?</h3>
+                    <label for="sim_ou"><input type="radio" name="exepimentou" id="sim_ou"> Sim</label>
+                    <label for="não_ou"><input type="radio" name="exepimentou" id="não_ou" checked> Não</label>
+                    
+                    <h3>Se sim, qual/quais das opções abaixo?</h3>
+                    <label for="branca"><input type="checkbox" name="tipo_pitaya" id="branca"> Pitaya Branca</label>
+                    <label for="vermelha"><input type="checkbox" name="tipo_pitaya" id="vermelha"> Pitaya Vermelha</label>
+                    <label for="amarela"><input type="checkbox" name="tipo_pitaya" id="amarela"> Pitaya Amarela</label>
+                    <label for="outra"><input type="checkbox" name="tipo_pitaya" id="outra"> Outra</label>
+                    
+                    <h3>Se não, gostaria de experimetar?</h3>
+                    <label for="sim_ar"><input type="radio" name="experimetar" id="sim_ar"> Sim</label>
+                    <label for="não_ar"><input type="radio" name="experimetar" id="não_ar"> Não</label>
+                    <label for="talvez"><input type="radio" name="experimetar" id="talvez"> Talvez</label>
+    
+                    <h3>Alguma sugestão para o site?</h3>
+                    <textarea name="sugestao" id="sugestao" cols="50" rows="10">Escreva aqui sua sugestão!</textarea>
+    
+                    <input type="submit">
+
+                </div>
+            </form>
+
+        </main>
+    </div>
+
+    <footer>
+
+        <div>
+            <img src="../images/unirio_logo.png" alt="Unirio_logo">
+            <h5>UNIRIO<br>2022.1</h5>
+        
+        </div>
+        <div>
+            <h5>Menu</h5>
+            <p><a href="./index.html">Início</a></p>
+            <p><a href="./historia.html">Histórico</a></p> 
+            <p><a href="./quiz.html">Quiz</a></p>
+            <p><a href="./curiosidades.html">Curiosidades</a></p>
+        </div>
+        <div>
+            <h5>Referências</h5>
+            <p><a href="https://www.pitayadobrasil.com.br/" target="_blank">Pitaya do Brasil</a></p>
+            <p><a href="https://www.ufla.br/dcom/2018/01/25/pitaia-conheca-a-fruta-exotica-tipica-do-verao-que-tem-conquistado-o-mercado-brasileiro/" target="_blank">UFLA</a></p>
+            <p><a href="https://ainfo.cnptia.embrapa.br/digital/bitstream/item/145283/1/BPD16007.pdf" target="_blank">Embrapa: Crescimento de Mudas de Pitaya</a></p>
+            <p><a href="https://www.bbc.com/news/world-asia-india-55732616" target="_blank">BBC: Reportagem sobre Kamalam</a></p> 
+        </div>
+        
+    </footer>
+
+</body>
+</html>
