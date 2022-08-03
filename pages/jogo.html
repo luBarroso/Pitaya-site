@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/normalize.css" />
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link
+      rel="shortcut icon"
+      href="../images/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;900&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Pitaya - A Fruta do Dragão</title>
+  </head>
+  <body class="jogo">
+    <nav>
+      <img src="../images/logozinha.png" alt="Pitaya_Logo" />
+      <button type="button" class="icone_menu" onclick="menuAparece()"></button>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="historia.html">Histórico</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="curiosidades.html">Curiosidades</a></li>
+        <li><a id="pagina-atual" href="jogo.html">Jogo</a></li>
+      </ul>
+      <div class="menu_mobile">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="historia.html">Histórico</a></li>
+          <li><a href="quiz.html">Quiz</a></li>
+          <li><a href="curiosidades.html">Curiosidades</a></li>
+          <li><a id="pagina-atual" href="jogo.html">Jogo</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="main-e-fundo">
+      <main>
+        <canvas
+          id="myCanvas"
+          width="500"
+          height="500"
+          style="border: 1px solid #d3d3d3"
+        >
+          Your browser does not support the HTML5 canvas tag.
+        </canvas>
+
+        <div class="tela-fim-jogo">
+          <h3>Fim de Jogo!</h3>
+          <p></p>
+          <p></p>
+          <button
+            type="button"
+            onclick="window.requestAnimationFrame(draw) , esconderTela()"
+          >
+            Jogar novamente
+          </button>
+        </div>
+
+        <!-- <h3 id="status"></h3> -->
+        <!-- <h3 id="status2"></h3> -->
+        <h3 id="pontuacao">0</h3>
+      </main>
+    </div>
+
+    <footer>
+      <div>
+        <img src="../images/unirio_logo.png" alt="Unirio_logo" />
+        <h5>UNIRIO<br />2022.1</h5>
+      </div>
+      <div>
+        <h5>Menu</h5>
+        <p><a href="./index.html">Início</a></p>
+        <p><a href="./historia.html">Histórico</a></p>
+        <p><a href="./quiz.html">Quiz</a></p>
+        <p><a href="./curiosidades.html">Curiosidades</a></p>
+        <p><a href="./jogo.html">Jogo</a></p>
+      </div>
+      <div>
+        <h5>Referências</h5>
+        <p>
+          <a href="https://www.pitayadobrasil.com.br/" target="_blank"
+            >Pitaya do Brasil</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://www.ufla.br/dcom/2018/01/25/pitaia-conheca-a-fruta-exotica-tipica-do-verao-que-tem-conquistado-o-mercado-brasileiro/"
+            target="_blank"
+            >UFLA</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://ainfo.cnptia.embrapa.br/digital/bitstream/item/145283/1/BPD16007.pdf"
+            target="_blank"
+            >Embrapa: Crescimento de Mudas de Pitaya</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://www.bbc.com/news/world-asia-india-55732616"
+            target="_blank"
+            >BBC: Reportagem sobre Kamalam</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script src="../javascript/jogo.js"></script>
+    <script src="../javascript/index.js"></script>
+  </body>
+</html>

@@ -1,94 +1,181 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/index.css">
-    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/normalize.css" />
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link
+      rel="shortcut icon"
+      href="../images/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;900&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Pitaya - A Fruta do Dragão</title>
-</head>
-<body class="index">
-    <nav> <!--Tem como retirar da classe fixado!!!-->
-        <img src="../images/logozinha.png" alt="Pitaya_Logo">
+  </head>
+  <body class="index">
+    <nav>
+      <img src="../images/logozinha.png" alt="Pitaya_Logo" />
+      <button type="button" class="icone_menu" onclick="menuAparece()"></button>
+      <ul>
+        <li><a id="pagina-atual" href="index.html">Início</a></li>
+        <li><a href="historia.html">Histórico</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="curiosidades.html">Curiosidades</a></li>
+        <li><a href="jogo.html">Jogo</a></li>
+      </ul>
+      <div class="menu_mobile">
         <ul>
-            <li ><a id="pagina-atual" href="index.html">Início</a></li>
-            <li><a href="historia.html">Histórico</a></li>
-            <li><a href="quiz.html">Quiz</a></li>
-            <li><a href="curiosidades.html">Curiosidades</a></li>
+          <li><a id="pagina-atual" href="index.html">Início</a></li>
+          <li><a href="historia.html">Histórico</a></li>
+          <li><a href="quiz.html">Quiz</a></li>
+          <li><a href="curiosidades.html">Curiosidades</a></li>
+          <li><a href="jogo.html">Jogo</a></li>
         </ul>
+      </div>
     </nav>
-    
-    <div class="main-e-fundo">
-        <main>
-        
-            <header>
-                <div>
-                    <h1>Pitaya</h1>
-                    <p>Conhecendo um pouco sobre<br> a Fruta do Dragão!</p>
-                </div>
-                <img src="../images/Imagem-principal.png" alt="Pitaya1">
-            </header>
-            
-            <div class="introducao">
-                <p>
-                    Piataya, Pitaia ou Fruta do Dragão é um fruto de espécie variada de cactos epífitos. Nativa da América Central e do México, a fruta pitaya vem sendo cultivada em Israel, na China e aqui no Brasil (mais comum na região Nordeste). Por só ser cultivada a noite, ela está no grupo de “flor da noite”.
-                    A fruta pitaya tem um sabor muito doce e saboroso e vem sendo utilizada na fabricação de vinhos, sucos, chás (com as suas folhas) e principalmente doces.</p>
-                    <p>A motivação para a realização do site sobre essa estranha fruta advém do carácter exótico que ela possui, não sendo muito comum de ser achada em feiras, hortifrutis e mercados (além de possuir uma coloração bastante distinta).
-                    Dessa forma, a intenção é compreender um pouco mais sobre a pitaia e as curiosidades que a rodeiam.
-                </p>
-                
-                <img src="../images/varias-pitaias-cortadas.jpg" alt="Pitayas_cortadas">
-                <img src="../images/pitayas-cascas.jpg" alt="Pitayas_cascas">
-            </div>
-        
-            <div class="disposicao-de-sites">
-                <div id="historico">
-                    <h3>Histórico</h3>
-                    <p>Conheça mais sobre a Pitaya e sua história no Brasil e no mundo!</p>
-                    <p><a href="historia.html">Acessar página</a></p>
-                </div>
-                <div id="curiosidades">
-                    <h3>Curiosidades</h3>
-                    <p>Conheça um pouco as peculiaridades envolvendo a fruta Pitaya!</p>
-                    <p><a href="./curiosidades.html">Acessar página</a></p>
-                </div>
-                <div id="quiz">
-                    <h3>Quiz</h3>
-                    <p>Teste seus conhecimentos adquiridos realizando o quiz, que traz perguntas relacionadas à Pitaya!</p>
-                    <p><a href="./quiz.html">Acessar página</a></p>
-                </div>
-            </div>
 
-        </main>
-        
+    <div class="main-e-fundo">
+      <main>
+        <header>
+          <div>
+            <h1>Pitaya</h1>
+            <p>
+              Conhecendo um pouco sobre<br />
+              a Fruta do Dragão!
+            </p>
+          </div>
+          <picture>
+            <source
+              srcset="../images/Imagem-principal2.png"
+              media="(max-width: 550px)"
+            />
+            <img src="../images/Imagem-principal.png" alt="Pitaya1" />
+          </picture>
+        </header>
+
+        <div class="introducao">
+          <div>
+            <p>
+              Piataya, Pitaia ou
+              <span class="tooltip"
+                >Fruta do Dragão
+                <span class="tooltiptext"
+                  >Conhecido como "Dragon Fruit" no território
+                  norte-americano</span
+                ></span
+              >
+              é um fruto de espécie variada de cactos epífitos. Nativa da
+              América Central e do México, a fruta pitaya vem sendo cultivada em
+              Israel, na China e aqui no Brasil (mais comum na região Nordeste).
+              Por só ser cultivada a noite, ela está no grupo de “flor da
+              noite”. A fruta pitaya tem um sabor muito doce e saboroso e vem
+              sendo utilizada na fabricação de vinhos, sucos, chás (com as suas
+              folhas) e principalmente doces.
+            </p>
+            <p>
+              A motivação para a realização do site sobre essa estranha fruta
+              advém do carácter exótico que ela possui, não sendo muito comum de
+              ser achada em feiras, hortifrutis e mercados (além de possuir uma
+              coloração bastante distinta). Dessa forma, a intenção é
+              compreender um pouco mais sobre a pitaia e as curiosidades que a
+              rodeiam.
+            </p>
+          </div>
+
+          <img
+            src="../images/varias-pitaias-cortadas.jpg"
+            alt="Pitayas_cortadas"
+          />
+          <img src="../images/pitayas-cascas.jpg" alt="Pitayas_cascas" />
+        </div>
+
+        <button type="button" onclick="mudarMes('-')" class="botao-mudarMes">
+          <
+        </button>
+        <section class="calendario"></section>
+        <button type="button" onclick="mudarMes('+')" class="botao-mudarMes">
+          >
+        </button>
+
+        <div class="disposicao-de-sites">
+          <div id="historico">
+            <h3>Histórico</h3>
+            <p>
+              Conheça mais sobre a Pitaya e sua história no Brasil e no mundo!
+            </p>
+            <p><a href="historia.html">Acessar página</a></p>
+          </div>
+          <div id="curiosidades">
+            <h3>Curiosidades</h3>
+            <p>Conheça um pouco as peculiaridades envolvendo a fruta Pitaya!</p>
+            <p><a href="./curiosidades.html">Acessar página</a></p>
+          </div>
+          <div id="quiz">
+            <h3>Quiz</h3>
+            <p>
+              Teste seus conhecimentos adquiridos realizando o quiz, que traz
+              perguntas relacionadas à Pitaya!
+            </p>
+            <p><a href="./quiz.html">Acessar página</a></p>
+          </div>
+          <div id="jogo">
+            <h3>Jogo</h3>
+            <p>Teste suas abilidades em um jogo simples temático de Piatay!</p>
+            <p><a href="./jogo.html">Acessar página</a></p>
+          </div>
+        </div>
+      </main>
     </div>
 
-    
     <footer>
+      <div>
+        <img src="../images/unirio_logo.png" alt="Unirio_logo" />
+        <h5>UNIRIO<br />2022.1</h5>
+      </div>
+      <div>
+        <h5>Menu</h5>
+        <p><a href="./index.html">Início</a></p>
+        <p><a href="./historia.html">Histórico</a></p>
+        <p><a href="./quiz.html">Quiz</a></p>
+        <p><a href="./curiosidades.html">Curiosidades</a></p>
+        <p><a href="./jogo.html">Jogo</a></p>
+      </div>
+      <div>
+        <h5>Referências</h5>
+        <p>
+          <a href="https://www.pitayadobrasil.com.br/" target="_blank"
+            >Pitaya do Brasil</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://www.ufla.br/dcom/2018/01/25/pitaia-conheca-a-fruta-exotica-tipica-do-verao-que-tem-conquistado-o-mercado-brasileiro/"
+            target="_blank"
+            >UFLA</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://ainfo.cnptia.embrapa.br/digital/bitstream/item/145283/1/BPD16007.pdf"
+            target="_blank"
+            >Embrapa: Crescimento de Mudas de Pitaya</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://www.bbc.com/news/world-asia-india-55732616"
+            target="_blank"
+            >BBC: Reportagem sobre Kamalam</a
+          >
+        </p>
+      </div>
+    </footer>
 
-        <div>
-            <img src="../images/unirio_logo.png" alt="Unirio_logo">
-            <h5>UNIRIO<br>2022.1</h5>
-        
-        </div>
-        <div>
-            <h5>Menu</h5>
-            <p><a href="./index.html">Início</a></p>
-            <p><a href="./historia.html">Histórico</a></p> 
-            <p><a href="./quiz.html">Quiz</a></p>
-            <p><a href="./curiosidades.html">Curiosidades</a></p>
-        </div>
-        <div>
-            <h5>Referências</h5>
-            <p><a href="https://www.pitayadobrasil.com.br/" target="_blank">Pitaya do Brasil</a></p>
-            <p><a href="https://www.ufla.br/dcom/2018/01/25/pitaia-conheca-a-fruta-exotica-tipica-do-verao-que-tem-conquistado-o-mercado-brasileiro/" target="_blank">UFLA</a></p>
-            <p><a href="https://ainfo.cnptia.embrapa.br/digital/bitstream/item/145283/1/BPD16007.pdf" target="_blank">Embrapa: Crescimento de Mudas de Pitaya</a></p>
-            <p><a href="https://www.bbc.com/news/world-asia-india-55732616" target="_blank">BBC: Reportagem sobre Kamalam</a></p> 
-        </div>
-        
-    </footer>    
-
-</body>
+    <script src="../javascript/index.js"></script>
+  </body>
 </html>

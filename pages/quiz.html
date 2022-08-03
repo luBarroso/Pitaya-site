@@ -1,137 +1,423 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/index.css">
-    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/normalize.css" />
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link
+      rel="shortcut icon"
+      href="../images/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;900&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Pitaya - A Fruta do Dragão</title>
-</head>
+  </head>
 
-<body class="quiz">
+  <body class="quiz">
     <nav>
-        <img src="../images/logozinha.png" alt="Pitaya_logo">
+      <img src="../images/logozinha.png" alt="Pitaya_logo" />
+      <button type="button" class="icone_menu" onclick="menuAparece()"></button>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="historia.html">Histórico</a></li>
+        <li><a id="pagina-atual" href="quiz.html">Quiz</a></li>
+        <li><a href="curiosidades.html">Curiosidades</a></li>
+        <li><a href="jogo.html">Jogo</a></li>
+      </ul>
+      <div class="menu_mobile">
         <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="historia.html">Histórico</a></li>
-            <li ><a id="pagina-atual" href="quiz.html">Quiz</a></li>
-            <li><a href="curiosidades.html">Curiosidades</a></li>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="historia.html">Histórico</a></li>
+          <li><a id="pagina-atual" href="quiz.html">Quiz</a></li>
+          <li><a href="curiosidades.html">Curiosidades</a></li>
+          <li><a href="jogo.html">Jogo</a></li>
         </ul>
+      </div>
     </nav>
+    <p id="pontuacao-quiz">0 / 0</p>
     <div class="main-e-fundo">
-        <main>
-            <h2 class="quiz">Quiz</h2>
+      <main>
+        <h2 class="quiz">Quiz</h2>
 
-            <form class="quiz">
-                <h3>Em que país a Pitaya é uma fruta nativa?</h3>
-                <div class="perguntas">
-                    <button class="errado" type="button">Alemanha</button>
-                    <button class="errado" type="button">Autrália</button>
-                    <button class="certo" type="button">México</button>
-                    <button class="errado" type="button">Índia</button>
-                </div>
-    
-                <h3>Verdadeiro ou Falso?</h3>
-                <p class="afirmacao">"As flores de Pitaya florescem durante a noite."</p>
-                <div class="perguntas">
-                    <button class="certo" type="button">Verdadeiro</button>
-                    <button class="errado" type="button">Falso</button>
-                </div>
+        <form class="quiz">
+          <!-- <div class="questoes">
+            <h3>Em que país a Pitaya é uma fruta nativa?</h3>
+            <div class="perguntas">
+              <button onclick="verificaResposta(this, false)" type="button">
+                Alemanha
+              </button>
+              <button onclick="verificaResposta(this, false)" type="button">
+                Austrália
+              </button>
+              <button onclick="verificaResposta(this, true)" type="button">
+                México
+              </button>
+              <button onclick="verificaResposta(this, false)" type="button">
+                Índia
+              </button>
+            </div>
+          </div>
 
-                <h3>Qual a espécie da pitaya da imagem abaixo?</h3>
-                <img class="afirmacao" src="../images/Pergunta_pitaya_1.png" alt="Pitaya Pergunta 2">
-                <div class="perguntas">
-                    <button class="errado" type="button">Selenicereus Megalanthus</button>
-                    <button class="errado" type="button">Hylocereus Undatus</button>
-                    <button class="certo" type="button">Hylocereus Polyrhizus</button>
-                    <button class="errado" type="button">Selenicereus chrysocardium</button>
-                </div>
-                
-                <h3>Qual a espécie da pitaya da imagem abaixo?</h3>
-                <img class="afirmacao" src="../images/Pergunta_pitaya_2.png" alt="Pitaya Pergunta 2">
-                <div class="perguntas">
-                    <button class="errado" type="button">Selenicereus Megalanthus</button>
-                    <button class="certo" type="button">Hylocereus Undatus</button>
-                    <button class="errado" type="button">Hylocereus Polyrhizus</button>
-                    <button class="errado" type="button">Selenicereus chrysocardium</button>
-                </div>
+          <h3>Verdadeiro ou Falso?</h3>
+          <p class="afirmacao">
+            "As flores de Pitaya florescem durante a noite."
+          </p>
+          <div class="perguntas">
+            <button class="certo" type="button">Verdadeiro</button>
+            <button class="errado" type="button">Falso</button>
+          </div>
 
-                <h3>Qual a espécie da pitaya da imagem abaixo?</h3>
-                <img class="afirmacao" src="../images/Pergunta_pitaya_3.png" alt="Pitaya Pergunta 2">
-                <div class="perguntas">
-                    <button class="certo" type="button">Selenicereus Megalanthus</button>
-                    <button class="errado" type="button">Hylocereus Undatus</button>
-                    <button class="errado" type="button">Hylocereus Polyrhizus</button>
-                    <button class="errado" type="button">Selenicereus chrysocardium</button>
-                </div>
+          <h3>Qual a espécie da pitaya da imagem abaixo?</h3>
+          <img
+            class="afirmacao"
+            src="../images/Pergunta_pitaya_1.png"
+            alt="Pitaya Pergunta 2"
+          />
+          <div class="perguntas">
+            <button class="errado" type="button">
+              Selenicereus Megalanthus
+            </button>
+            <button class="errado" type="button">Hylocereus Undatus</button>
+            <button class="certo" type="button">Hylocereus Polyrhizus</button>
+            <button class="errado" type="button">
+              Selenicereus chrysocardium
+            </button>
+          </div>
 
-                <h3>Verdadeiro ou Falso?</h3>
-                <p class="afirmacao">"A pitaya é pertencente à família de cactáceas."</p>
-                <div class="perguntas">
-                    <button class="certo" type="button">Verdadeiro</button>
-                    <button class="errado" type="button">Falso</button>
-                </div>
+          <h3>Qual a espécie da pitaya da imagem abaixo?</h3>
+          <img
+            class="afirmacao"
+            src="../images/Pergunta_pitaya_2.png"
+            alt="Pitaya Pergunta 2"
+          />
+          <div class="perguntas">
+            <button class="errado" type="button">
+              Selenicereus Megalanthus
+            </button>
+            <button class="certo" type="button">Hylocereus Undatus</button>
+            <button class="errado" type="button">Hylocereus Polyrhizus</button>
+            <button class="errado" type="button">
+              Selenicereus chrysocardium
+            </button>
+          </div>
 
-                <h3>Verdadeiro ou Falso?</h3>
-                <p class="afirmacao">"A pitaya Selenicereus Megalanthus, também conhecida como pitaya amarela, não possui espinhos."</p>
-                <div class="perguntas">
-                    <button class="errado" type="button">Verdadeiro</button>
-                    <button class="certo" type="button">Falso</button>
-                </div>
+          <h3>Qual a espécie da pitaya da imagem abaixo?</h3>
+          <img
+            class="afirmacao"
+            src="../images/Pergunta_pitaya_3.png"
+            alt="Pitaya Pergunta 2"
+          />
+          <div class="perguntas">
+            <button class="certo" type="button">
+              Selenicereus Megalanthus
+            </button>
+            <button class="errado" type="button">Hylocereus Undatus</button>
+            <button class="errado" type="button">Hylocereus Polyrhizus</button>
+            <button class="errado" type="button">
+              Selenicereus chrysocardium
+            </button>
+          </div>
 
-                <div class="questionario">
-                    <p>Questionário</p>
-                    <h3>Você já experimentou uma pitaya?</h3>
-                    <label for="sim_ou"><input type="radio" name="exepimentou" id="sim_ou"> Sim</label>
-                    <label for="não_ou"><input type="radio" name="exepimentou" id="não_ou" checked> Não</label>
-                    
-                    <h3>Se sim, qual/quais das opções abaixo?</h3>
-                    <label for="branca"><input type="checkbox" name="tipo_pitaya" id="branca"> Pitaya Branca</label>
-                    <label for="vermelha"><input type="checkbox" name="tipo_pitaya" id="vermelha"> Pitaya Vermelha</label>
-                    <label for="amarela"><input type="checkbox" name="tipo_pitaya" id="amarela"> Pitaya Amarela</label>
-                    <label for="outra"><input type="checkbox" name="tipo_pitaya" id="outra"> Outra</label>
-                    
-                    <h3>Se não, gostaria de experimetar?</h3>
-                    <label for="sim_ar"><input type="radio" name="experimetar" id="sim_ar"> Sim</label>
-                    <label for="não_ar"><input type="radio" name="experimetar" id="não_ar"> Não</label>
-                    <label for="talvez"><input type="radio" name="experimetar" id="talvez"> Talvez</label>
-    
-                    <h3>Alguma sugestão para o site?</h3>
-                    <textarea name="sugestao" id="sugestao" cols="50" rows="10">Escreva aqui sua sugestão!</textarea>
-    
-                    <input type="submit">
+          <h3>Verdadeiro ou Falso?</h3>
+          <p class="afirmacao">
+            "A pitaya é pertencente à família de cactáceas."
+          </p>
+          <div class="perguntas">
+            <button class="certo" type="button">Verdadeiro</button>
+            <button class="errado" type="button">Falso</button>
+          </div>
 
-                </div>
-            </form>
+          <h3>Verdadeiro ou Falso?</h3>
+          <p class="afirmacao">
+            "A pitaya Selenicereus Megalanthus, também conhecida como pitaya
+            amarela, não possui espinhos."
+          </p>
+          <div class="perguntas">
+            <button class="errado" type="button">Verdadeiro</button>
+            <button class="certo" type="button">Falso</button>
+          </div> -->
 
-        </main>
+          <div class="questionario">
+            <p>Questionário</p>
+            <h3>Você já experimentou uma pitaya?</h3>
+            <label for="sim_ou"
+              ><input type="radio" name="exepimentou" id="sim_ou" /> Sim</label
+            >
+            <label for="não_ou"
+              ><input type="radio" name="exepimentou" id="não_ou" checked />
+              Não</label
+            >
+
+            <h3>Se sim, qual/quais das opções abaixo?</h3>
+            <label for="branca"
+              ><input type="checkbox" name="tipo_pitaya" id="branca" /> Pitaya
+              Branca</label
+            >
+            <label for="vermelha"
+              ><input type="checkbox" name="tipo_pitaya" id="vermelha" /> Pitaya
+              Vermelha</label
+            >
+            <label for="amarela"
+              ><input type="checkbox" name="tipo_pitaya" id="amarela" /> Pitaya
+              Amarela</label
+            >
+            <label for="outra"
+              ><input type="checkbox" name="tipo_pitaya" id="outra" />
+              Outra</label
+            >
+
+            <h3>Se não, gostaria de experimetar?</h3>
+            <label for="sim_ar"
+              ><input type="radio" name="experimetar" id="sim_ar" /> Sim</label
+            >
+            <label for="não_ar"
+              ><input type="radio" name="experimetar" id="não_ar" /> Não</label
+            >
+            <label for="talvez"
+              ><input type="radio" name="experimetar" id="talvez" />
+              Talvez</label
+            >
+
+            <h3>Alguma sugestão para o site?</h3>
+            <textarea name="sugestao" id="sugestao" cols="50" rows="10">
+Escreva aqui sua sugestão!</textarea
+            >
+
+            <input type="submit" />
+          </div>
+        </form>
+      </main>
     </div>
 
     <footer>
-
-        <div>
-            <img src="../images/unirio_logo.png" alt="Unirio_logo">
-            <h5>UNIRIO<br>2022.1</h5>
-        
-        </div>
-        <div>
-            <h5>Menu</h5>
-            <p><a href="./index.html">Início</a></p>
-            <p><a href="./historia.html">Histórico</a></p> 
-            <p><a href="./quiz.html">Quiz</a></p>
-            <p><a href="./curiosidades.html">Curiosidades</a></p>
-        </div>
-        <div>
-            <h5>Referências</h5>
-            <p><a href="https://www.pitayadobrasil.com.br/" target="_blank">Pitaya do Brasil</a></p>
-            <p><a href="https://www.ufla.br/dcom/2018/01/25/pitaia-conheca-a-fruta-exotica-tipica-do-verao-que-tem-conquistado-o-mercado-brasileiro/" target="_blank">UFLA</a></p>
-            <p><a href="https://ainfo.cnptia.embrapa.br/digital/bitstream/item/145283/1/BPD16007.pdf" target="_blank">Embrapa: Crescimento de Mudas de Pitaya</a></p>
-            <p><a href="https://www.bbc.com/news/world-asia-india-55732616" target="_blank">BBC: Reportagem sobre Kamalam</a></p> 
-        </div>
-        
+      <div>
+        <img src="../images/unirio_logo.png" alt="Unirio_logo" />
+        <h5>UNIRIO<br />2022.1</h5>
+      </div>
+      <div>
+        <h5>Menu</h5>
+        <p><a href="./index.html">Início</a></p>
+        <p><a href="./historia.html">Histórico</a></p>
+        <p><a href="./quiz.html">Quiz</a></p>
+        <p><a href="./curiosidades.html">Curiosidades</a></p>
+        <p><a href="./jogo.html">Jogo</a></p>
+      </div>
+      <div>
+        <h5>Referências</h5>
+        <p>
+          <a href="https://www.pitayadobrasil.com.br/" target="_blank"
+            >Pitaya do Brasil</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://www.ufla.br/dcom/2018/01/25/pitaia-conheca-a-fruta-exotica-tipica-do-verao-que-tem-conquistado-o-mercado-brasileiro/"
+            target="_blank"
+            >UFLA</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://ainfo.cnptia.embrapa.br/digital/bitstream/item/145283/1/BPD16007.pdf"
+            target="_blank"
+            >Embrapa: Crescimento de Mudas de Pitaya</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://www.bbc.com/news/world-asia-india-55732616"
+            target="_blank"
+            >BBC: Reportagem sobre Kamalam</a
+          >
+        </p>
+      </div>
     </footer>
 
-</body>
+    <script src="../javascript/index.js"></script>
+
+    <script>
+      var pontuacaoQuiz = 0;
+      var questoesRealizadas = 0;
+
+      const verificaResposta = (texto, acerto, index) => {
+        if (acerto) {
+          texto.style.backgroundColor = "#7eff73";
+          pontuacaoQuiz++;
+        } else {
+          texto.style.backgroundColor = "#ff7bb6";
+        }
+
+        questoesRealizadas++;
+
+        document.getElementById("pontuacao-quiz").innerHTML =
+          pontuacaoQuiz + " / " + questoesRealizadas;
+
+        let opcoes =
+          document.getElementsByClassName("perguntas")[6 - index].children; // por estar inserindo antes, o index fica em ordem decrescente
+
+        for (let i = 0; i < opcoes.length; i++) {
+          document
+            .getElementsByClassName("perguntas")
+            [6 - index].childNodes[i].removeAttribute("onclick");
+        }
+
+        console.log(6 - index);
+      };
+
+      const shuffle = (array) => {
+        let tmp,
+          current,
+          top = array.length;
+        for (let i = top - 1; i >= 0; i--) {
+          current = Math.floor(Math.random() * (i + 1));
+          tmp = array[current];
+          array[current] = array[i];
+          array[i] = tmp;
+        }
+        return array;
+      };
+
+      const main = (() => {
+        let perguntas = [
+          [
+            "simples",
+            "Em que país a Pitaya é uma furta nativa?",
+            "",
+            "México",
+            "Alemanha",
+            "Austrália",
+            "Índia",
+            false,
+          ],
+          [
+            "frase",
+            "Verdadeiro ou Falso?",
+            '"As flores de Pitaya florecem durante a noite."',
+            "Verdadeiro",
+            "Falso",
+            false,
+          ],
+          [
+            "imagem",
+            "Qual a espécie de Pitaya da imagem abaixo?",
+            "../images/Pergunta_pitaya_1.png",
+            "Hylocereus Polyrhizus",
+            "Selenicereus Megalanthus",
+            "Hylocereus Undatus",
+            "Selenicereus Chrysocardium",
+            false,
+          ],
+          [
+            "imagem",
+            "Qual a espécie de Pitaya da imagem abaixo?",
+            "../images/Pergunta_pitaya_2.png",
+            "Hylocereus Undatus",
+            "Selenicereus Megalanthus",
+            "Hylocereus Polyrhizus",
+            "Selenicereus Chrysocardium",
+            false,
+          ],
+          [
+            "imagem",
+            "Qual a espécie de Pitaya da imagem abaixo?",
+            "../images/Pergunta_pitaya_3.png",
+            "Selenicereus Megalanthus",
+            "Hylocereus Undatus",
+            "Hylocereus Polyrhizus",
+            "Selenicereus Chrysocardium",
+            false,
+          ],
+          [
+            "frase",
+            "Verdadeiro ou Falso?",
+            '"A pitaya é pertencente à família de cactáceas."',
+            "Verdadeiro",
+            "Falso",
+            false,
+          ],
+          [
+            "frase",
+            "Verdadeiro ou Falso?",
+            '"A pitaya Selenicereus Megalanthus, também conhecida como pitaya amarela, não possui espinhos."',
+            "Falso",
+            "Verdadeiro",
+            false,
+          ],
+        ];
+
+        let div;
+
+        let perguntasIndex = [];
+        for (let i = 0; i < 7; i++) perguntasIndex[i] = i;
+        shuffle(perguntasIndex);
+
+        console.log(perguntasIndex);
+
+        for (i = 0; i < 7; i++) {
+          div = document.createElement("div");
+          div.setAttribute("class", "questoes");
+
+          let pergunta = document.createElement("h3");
+          div.appendChild(pergunta);
+          pergunta.innerHTML = perguntas[perguntasIndex[i]][1];
+
+          if (perguntas[perguntasIndex[i]][0] === "frase") {
+            let frase = document.createElement("p");
+            div.appendChild(frase);
+            frase.setAttribute("class", "afirmacao");
+            frase.innerHTML = perguntas[perguntasIndex[i]][2];
+          } else if (perguntas[perguntasIndex[i]][0] === "imagem") {
+            let imagem = document.createElement("img");
+            div.appendChild(imagem);
+            imagem.setAttribute("class", "afirmacao");
+            imagem.src = perguntas[perguntasIndex[i]][2];
+          }
+
+          let divPerguntas = document.createElement("div");
+          divPerguntas.setAttribute("class", "perguntas");
+
+          let qtdOpcoes = 0;
+
+          for (
+            let j = 3;
+            typeof perguntas[perguntasIndex[i]][j] != "boolean";
+            j++
+          ) {
+            qtdOpcoes++;
+          }
+
+          let opcoesIndex = [];
+          for (let i = 0; i < qtdOpcoes; i++) opcoesIndex[i] = i;
+          shuffle(opcoesIndex);
+
+          for (let j = 0; j < qtdOpcoes; j++) {
+            let opcao = document.createElement("button");
+            divPerguntas.appendChild(opcao);
+            opcao.setAttribute("type", "button");
+            if (opcoesIndex[j] === 0) {
+              opcao.setAttribute(
+                "onclick",
+                "verificaResposta(this, true, " + i + ")"
+              );
+            } else {
+              opcao.setAttribute(
+                "onclick",
+                "verificaResposta(this, false, " + i + ")"
+              );
+            }
+            opcao.innerHTML = perguntas[perguntasIndex[i]][3 + opcoesIndex[j]];
+          }
+
+          div.appendChild(divPerguntas);
+
+          document.getElementsByTagName("form")[0].prepend(div);
+        }
+      })();
+    </script>
+  </body>
 </html>
