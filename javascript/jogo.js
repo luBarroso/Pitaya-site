@@ -3,7 +3,7 @@ class pitaya {
     this.PosX = PosX;
     this.PosY = PosY;
     this.imagem = new Image(90, 70);
-    this.imagem.src = "logozinha.png";
+    this.imagem.src = "../images/logozinha.png";
   }
 }
 

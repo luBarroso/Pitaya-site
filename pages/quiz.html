@@ -45,103 +45,6 @@
         <h2 class="quiz">Quiz</h2>
 
         <form class="quiz">
-          <!-- <div class="questoes">
-            <h3>Em que país a Pitaya é uma fruta nativa?</h3>
-            <div class="perguntas">
-              <button onclick="verificaResposta(this, false)" type="button">
-                Alemanha
-              </button>
-              <button onclick="verificaResposta(this, false)" type="button">
-                Austrália
-              </button>
-              <button onclick="verificaResposta(this, true)" type="button">
-                México
-              </button>
-              <button onclick="verificaResposta(this, false)" type="button">
-                Índia
-              </button>
-            </div>
-          </div>
-
-          <h3>Verdadeiro ou Falso?</h3>
-          <p class="afirmacao">
-            "As flores de Pitaya florescem durante a noite."
-          </p>
-          <div class="perguntas">
-            <button class="certo" type="button">Verdadeiro</button>
-            <button class="errado" type="button">Falso</button>
-          </div>
-
-          <h3>Qual a espécie da pitaya da imagem abaixo?</h3>
-          <img
-            class="afirmacao"
-            src="../images/Pergunta_pitaya_1.png"
-            alt="Pitaya Pergunta 2"
-          />
-          <div class="perguntas">
-            <button class="errado" type="button">
-              Selenicereus Megalanthus
-            </button>
-            <button class="errado" type="button">Hylocereus Undatus</button>
-            <button class="certo" type="button">Hylocereus Polyrhizus</button>
-            <button class="errado" type="button">
-              Selenicereus chrysocardium
-            </button>
-          </div>
-
-          <h3>Qual a espécie da pitaya da imagem abaixo?</h3>
-          <img
-            class="afirmacao"
-            src="../images/Pergunta_pitaya_2.png"
-            alt="Pitaya Pergunta 2"
-          />
-          <div class="perguntas">
-            <button class="errado" type="button">
-              Selenicereus Megalanthus
-            </button>
-            <button class="certo" type="button">Hylocereus Undatus</button>
-            <button class="errado" type="button">Hylocereus Polyrhizus</button>
-            <button class="errado" type="button">
-              Selenicereus chrysocardium
-            </button>
-          </div>
-
-          <h3>Qual a espécie da pitaya da imagem abaixo?</h3>
-          <img
-            class="afirmacao"
-            src="../images/Pergunta_pitaya_3.png"
-            alt="Pitaya Pergunta 2"
-          />
-          <div class="perguntas">
-            <button class="certo" type="button">
-              Selenicereus Megalanthus
-            </button>
-            <button class="errado" type="button">Hylocereus Undatus</button>
-            <button class="errado" type="button">Hylocereus Polyrhizus</button>
-            <button class="errado" type="button">
-              Selenicereus chrysocardium
-            </button>
-          </div>
-
-          <h3>Verdadeiro ou Falso?</h3>
-          <p class="afirmacao">
-            "A pitaya é pertencente à família de cactáceas."
-          </p>
-          <div class="perguntas">
-            <button class="certo" type="button">Verdadeiro</button>
-            <button class="errado" type="button">Falso</button>
-          </div>
-
-          <h3>Verdadeiro ou Falso?</h3>
-          <p class="afirmacao">
-            "A pitaya Selenicereus Megalanthus, também conhecida como pitaya
-            amarela, não possui espinhos."
-          </p>
-          <div class="perguntas">
-            <button class="errado" type="button">Verdadeiro</button>
-            <button class="certo" type="button">Falso</button>
-          </div> -->
-
           <div class="questionario">
             <p>Questionário</p>
             <h3>Você já experimentou uma pitaya?</h3>
@@ -306,30 +209,30 @@ Escreva aqui sua sugestão!</textarea
             "imagem",
             "Qual a espécie de Pitaya da imagem abaixo?",
             "../images/Pergunta_pitaya_1.png",
-            "Hylocereus Polyrhizus",
-            "Selenicereus Megalanthus",
-            "Hylocereus Undatus",
-            "Selenicereus Chrysocardium",
+            "<span class='p-italico'>Hylocereus polyrhizus</span>",
+            "<span class='p-italico'>Selenicereus megalanthus</span>",
+            "<span class='p-italico'>Hylocereus undatus</span>",
+            "<span class='p-italico'>Selenicereus chrysocardium</span>",
             false,
           ],
           [
             "imagem",
             "Qual a espécie de Pitaya da imagem abaixo?",
             "../images/Pergunta_pitaya_2.png",
-            "Hylocereus Undatus",
-            "Selenicereus Megalanthus",
-            "Hylocereus Polyrhizus",
-            "Selenicereus Chrysocardium",
+            "<span class='p-italico'>Hylocereus undatus</span>",
+            "<span class='p-italico'>Selenicereus megalanthus</span>",
+            "<span class='p-italico'>Hylocereus polyrhizus</span>",
+            "<span class='p-italico'>Selenicereus chrysocardium</span>",
             false,
           ],
           [
             "imagem",
             "Qual a espécie de Pitaya da imagem abaixo?",
             "../images/Pergunta_pitaya_3.png",
-            "Selenicereus Megalanthus",
-            "Hylocereus Undatus",
-            "Hylocereus Polyrhizus",
-            "Selenicereus Chrysocardium",
+            "<span class='p-italico'>Selenicereus megalanthus</span>",
+            "<span class='p-italico'>Hylocereus undatus</span>",
+            "<span class='p-italico'>Hylocereus polyrhizus</span>",
+            "<span class='p-italico'>Selenicereus chrysocardium</span>",
             false,
           ],
           [
@@ -343,7 +246,7 @@ Escreva aqui sua sugestão!</textarea
           [
             "frase",
             "Verdadeiro ou Falso?",
-            '"A pitaya Selenicereus Megalanthus, também conhecida como pitaya amarela, não possui espinhos."',
+            '"A pitaya <span class="p-italico">Selenicereus megalanthus</span>, também conhecida como pitaya amarela, não possui espinhos."',
             "Falso",
             "Verdadeiro",
             false,
