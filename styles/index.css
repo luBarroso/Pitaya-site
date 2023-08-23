@@ -673,7 +673,7 @@ form button {
 
 @media only screen and (max-width: 450px) {
   form button {
-    width: 40vw;
+    width: 35vw;
   }
 }
 
