@@ -29,7 +29,7 @@ nav {
   position: fixed;
   width: 100%;
   height: 10vh;
-  min-height: 80px;
+  min-height: 50px;
   background-image: url(../images/background_menu.jpg);
   background-color: #ff107d;
   z-index: 20;
@@ -117,6 +117,7 @@ main {
   display: none;
   height: 50%;
   width: 8%;
+  min-width: 30px;
   background-size: contain;
   background-position: right;
   background-repeat: no-repeat;
@@ -717,6 +718,7 @@ textarea {
   padding: 2%;
   font-family: "Roboto", sans-serif;
   background-color: #fffd73;
+  width: 100%;
 }
 
 input[type="submit"] {
@@ -737,6 +739,7 @@ body.curiosidades {
 
 h2.curiosidades {
   text-shadow: 4px 4px #fffb00;
+  font-size: calc(4vw + 50px);
 }
 
 .kamalam {
